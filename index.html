@@ -84,20 +84,53 @@ body::after {
   justify-content: space-between;
   gap: 12px;
 }
+@import url('https://googleapis.com');
+
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Dono parts ke darmiyan modern gap */
+  background: transparent;
+  padding: 10px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* 1. WH - Stylish Line-Art / Rounded Look */
+.logo .brand-letters {
+  font-family: 'Comfortaa', cursive, sans-serif; /* Stylish & rounded style ke liye */
+  font-size: 26px; /* Text se thora bara dikhane ke liye */
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em; /* W aur H ko aapas mein jorne ke liye */
+  
+  /* Purple to Pink Neon Gradient */
   background: linear-gradient(135deg, #a78bfa, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
+  
+  /* Image jaisa subtle neon glow shadow effect */
+  filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.3));
 }
+
+/* 2. PROMPTS - Clean Modern Block Letters */
+.logo .brand-text {
+  font-family: 'Space Grotesk', sans-serif; /* Clean geometric font */
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.05em; /* Jese pehle horizontally expand kiya tha */
+  text-transform: uppercase;
+  
+  /* Pinkish Solid Gradient (Image ke mutabiq) */
+  background: linear-gradient(135deg, #ec4899,  #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Pink Neon Glow */
+  filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.2));
+}
+
 .logo-icon {
   width: 30px; height: 30px;
   border-radius: 8px;
@@ -723,11 +756,12 @@ body::after {
 <header class="header">
   <div class="header-inner">
     <div class="logo">
-      <div class="logo-icon">⚡</div>
-      WHPROMTS
-    </div>
+  <span class="brand-letters">WH</span>
+  <span class="brand-text">PROMPTS</span>
+</div>
+
     <div class="header-actions">
-      <span class="header-badge">VIP</span>
+      <!-- <span class="header-badge"></span> -->
       <!-- <a href="admin.html" class="admin-link">+ Add Prompt</a> -->
     </div>
   </div>
