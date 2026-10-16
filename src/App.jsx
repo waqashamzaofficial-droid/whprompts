@@ -1,0 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage'; import AdminPage from './pages/AdminPage'; import ContactPage from './pages/ContactPage'; import LegalPage from './pages/LegalPage';
+
+export default function App(){return <BrowserRouter basename={import.meta.env.BASE_URL}><Routes><Route path="/" element={<HomePage/>}/><Route path="/admin" element={<AdminPage/>}/><Route path="/contact" element={<ContactPage/>}/><Route path="/about" element={<LegalPage type="about"/>}/><Route path="/privacy-policy" element={<LegalPage type="privacy"/>}/><Route path="/terms" element={<LegalPage type="terms"/>}/><Route path="/disclaimer" element={<LegalPage type="disclaimer"/>}/><Route path="/dmca" element={<LegalPage type="dmca"/>}/><Route path="*" element={<HomePage/>}/></Routes></BrowserRouter>}

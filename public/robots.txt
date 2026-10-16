@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Allow Google AdSense crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# Sitemap
+Sitemap: https://whprompts.com/sitemap.xml
